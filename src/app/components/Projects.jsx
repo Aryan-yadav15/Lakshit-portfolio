@@ -31,9 +31,8 @@ const Projects = forwardRef((props, ref) => {
   );
 
   const cards = projects.projects.map((project, index) => (
-    <Link href={project.website}>
+    <Link href={project.website} key={project.title}>
       <Card
-        key={project.title}
         card={{
           category: "Project",
           title: project.title,
