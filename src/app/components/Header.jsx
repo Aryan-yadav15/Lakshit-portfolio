@@ -24,7 +24,7 @@ const Header = forwardRef(({ projectsRef, experienceRef, contactRef }, ref) => {
           </button>
           {/* Name visible only on small screens */}
           <div className="text-lg font-syne font-bold text-white">
-            KOMAL SURYAN
+            LAKSHIT VERMA
           </div>
           {menuOpen && (
             <div className="absolute left-4 top-16 bg-white rounded-lg shadow-lg p-4 space-y-2 flex flex-col justify-start items-">

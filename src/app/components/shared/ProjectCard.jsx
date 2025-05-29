@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const ProjectCard = ({ title, duration, details, image, website }) => {
@@ -16,6 +17,7 @@ const ProjectCard = ({ title, duration, details, image, website }) => {
         animate={{ rotateX: isFlipped ? 180 : 0 }}
       >
         {/* Front Side */}
+        <Link href={website } >
         <div className="absolute inset-0 w-full h-full [backface-visibility:hidden]">
           <Image
             src={image}
@@ -38,6 +40,7 @@ const ProjectCard = ({ title, duration, details, image, website }) => {
             </h3>
           </div>
         </div>
+        </Link>
 
         {/* Back Side */}
         <div

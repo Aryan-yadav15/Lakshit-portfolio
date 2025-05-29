@@ -3,7 +3,7 @@ export const projects = {
     {
       title: "PlayStation Universe ",
       image: "/PS.png",
-      website: "https://playzone.in", // replace if needed
+      website: "https://play-station-sand.vercel.app/", // replace if needed
       duration: "May 2025 – Present",
       details: [
         "Designed and developed a sleek, animated e-commerce platform for PlayStation consoles, games, and accessories using Next.js and GSAP",
@@ -16,7 +16,7 @@ export const projects = {
     {
       title: "Stay Branded Portfolio",
       image: "/SB.png",
-      website: "https://staybranded.com",
+      website: "https://stay-branded-web.vercel.app",
       duration: "March 2025 – May 2025",
       details: [
         "Built a modern, visually striking portfolio website using Next.js and Tailwind CSS with stunning animations",

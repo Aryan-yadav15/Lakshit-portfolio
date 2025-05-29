@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import Image from "next/image";
 import { projects } from "@/lib/projects";
 import { Card, Carousel } from "./shared/appleCardCarousel";
+import Link from "next/link";
 
 const Projects = forwardRef((props, ref) => {
   const ProjectContent = ({ project }) => (
@@ -14,7 +15,9 @@ const Projects = forwardRef((props, ref) => {
       </p>
       <ul className="list-disc pl-5 text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
         {project.details.map((detail, index) => (
-          <li key={index} className="mb-2">{detail}</li>
+          <li key={index} className="mb-2">
+            {detail}
+          </li>
         ))}
       </ul>
       <Image
@@ -28,16 +31,17 @@ const Projects = forwardRef((props, ref) => {
   );
 
   const cards = projects.projects.map((project, index) => (
-    <Card 
-      key={project.title} 
-      card={{
-        category: "Project",
-        title: project.title,
-        src: project.image,
-        content: <ProjectContent project={project} />
-      }} 
-      index={index} 
-    />
+    <Link href={project.website}>
+      <Card
+        key={project.title}
+        card={{
+          category: "Project",
+          title: project.title,
+          src: project.image,
+        }}
+        index={index}
+      />
+    </Link>
   ));
 
   return (
@@ -51,6 +55,6 @@ const Projects = forwardRef((props, ref) => {
   );
 });
 
-Projects.displayName = 'Projects';
+Projects.displayName = "Projects";
 
 export default Projects;
